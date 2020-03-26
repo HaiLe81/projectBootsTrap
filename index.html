@@ -6,11 +6,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+    </style>
+    <link href="./fontawesome-free-5.13.0-web/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
+    <!--load all styles -->
     <title>Exercise Copy Template From ThemeForest</title>
 </head>
 
 <body>
 
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading border">
+                <i class="fas fa-bolt"></i>
+                <span><strong>Pro</strong>UL</span>
+            </div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+                <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom nav-custom">
+                <ul class="nav navbar-nav-custom">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-bars fa-fw text-dark" id="menu-toggle"></i>
+                        </a>
+                    </li>
+                    <li class="drowdown open">
+                        <a href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <i class="fas fa-tools fa-fw text-dark ml-3"></i>
+                        </a>
+                        <!-- <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div> -->
+                        <ul class="dropdown-menu dropdown-custom rounded-0 p-0">
+                            <li class="dropdown-header text-center">Header Style</li>
+                            <li class="d-flex just justify-content-center">
+                                <div class="btn-group btn-group-sm  pt-2 pb-2 fix-width">
+                                    <a href="#" class="btn btn-primary active" id="options-header-default">Light</a>
+                                    <a href="#" class="btn btn-primary" id="options-header-inverse">Dark</a>
+                                </div>
+                            </li>
+                            <li class="dropdown-header text-center">Page Style</li>
+                            <li class="d-flex just justify-content-center">
+                                <div class="btn-group btn-group-sm  pt-2 pb-2 fix-width">
+                                    <a href="#" class="btn btn-primary active" id="options-main-style">Default</a>
+                                    <a href="#" class="btn btn-primary" id="options-main-style-alt">Alternative</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+                <form action="page_ready_search_results.php" method="POST" class="navbar-form-custom">
+                    <div class="form-group">
+                        <input type="text" class="form-control bg-light border-0" placeholder="Search...">
+                    </div>
+                </form>
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item d-flex align-items-center">
+                            <i class="fas fa-share-alt"></i>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" data-toggle="dropdown">
+                                <img class="rounded-circle avatar" src="./Images/avatar2.jpg" alt="not found">
+                                <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-custom dropdown-menu-right pt-0 pb-0">
+                                <li class="dropdown-header text-center">Account</li>
+                                <li class="">
+                                    <a href="#">
+                                        Updates
+                                        <span class="row-1">10</span>
+                                        <i class="far fa-clock icon-1"></i>
+                                    </a>
+                                    <a href="#">
+                                        Messages
+                                        <span class="row-2">5</span>
+                                        <i class="far fa-envelope icon-1"></i>
+                                    </a>
+                                    <a href="#">
+                                        Subcriptions
+                                        <span class="row-3">3</span>
+                                        <i class="fas fa-magnet icon-1"></i>
+                                    </a>
+                                    <a href="#">
+                                        FAQ
+                                        <span class="row-4">11</span>
+                                        <i class="fas fa-question icon-1"></i>
+                                    </a>
+                                </li>
+                                <!-- <li class="divider"></li> -->
+                                <li>
+                                    <a class="d-block" href="#">
+                                        Profile
+                                        <i class="fas fa-user icon-2"></i>
+                                    </a>
+                                    <a class="d-block" href="#">
+                                        Settings
+                                        <i class="fas fa-cog icon-2"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="d-block" href="#">
+                                        Lock Account
+                                        <i class="fas fa-lock icon-2"></i>
+                                    </a>
+                                    <a class="d-block" href="#">
+                                        Logout
+                                        <i class="fas fa-ban icon-2"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown-header text-center">Activity</li>
+                                <li>
+                                    <div class="alert alert-success alert-alt">
+                                        <small>5 min ago</small>
+                                        <br>
+                                        <i class="fas fa-thumbs-up fa-fw"></i>
+                                        You had a new sale ($10)
+                                    </div>
+                                    <div class="alert alert-info alert-alt">
+                                        <small>10 min ago</small>
+                                        <br>
+                                        <i class="fas fa-arrow-up fa-fw"></i>
+                                            Upgraded to Pro plan
+                                    </div>
+                                    <div class="alert alert-warning alert-alt">
+                                        <small>3 hours ago</small>
+                                        <br>
+                                        <i class="fas fa-exclamation fa-fw"></i>
+                                            Running low on space
+                                        <br>
+                                        <strong>18GB in use</strong>2GB left
+                                    </div>
+                                    <div class="alert alert-danger alert-alt">
+                                        <small>Yesterday</small>
+                                        <br>
+                                        <i class="fas fa-bug fa-fw"></i>
+                                            New bug submitted
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                <h1 class="mt-4">Simple Sidebar</h1>
+                <p>The starting state of the menu will appear collapsed on smaller screens, and will appear
+                    non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+                <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is
+                    optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID
+                    which will toggle the menu when clicked.</p>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -21,6 +199,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
 </body>
 
 </html>
